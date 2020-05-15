@@ -1606,14 +1606,22 @@ nav.popup-menu .close-menu-btn img {
 }
 
 #gallery .gallery-slider {
-    padding-left: 75px;
-    padding-right: 75px;
-    max-width: 900px;
+    position: relative;
+    height: 400px;
     margin: 0 auto;
-    text-align: center
+    display: block
 }
 
 #gallery .gallery-slider .slide {
+    margin: 0 auto !important;
+    position: absolute;
+    text-align: -webkit-center;
+    width: 100%;
+    opacity: 0
+}
+
+#gallery .gallery-slider .slide-active {
+    opacity: 1;
     margin: 0 auto !important;
     width: 100%
 }
