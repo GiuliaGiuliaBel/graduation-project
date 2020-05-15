@@ -11,16 +11,12 @@ const sliderGallery = () => {
                 currentSlide = 0;            
             }
             slides[currentSlide].classList.add('slide-active');
-            stopSlide();
         };
 
         const startSlide = () => {
             setInterval(autoplaySlide, 3000);
         };
 
-        const stopSlide = () => {
-            
-        }
         startSlide();     
 };
 
