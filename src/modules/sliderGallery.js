@@ -18,9 +18,6 @@ const sliderGallery = () => {
             setInterval(autoplaySlide, 3000);
         };
 
-        const stopSlide = () => {
-            
-        }
         startSlide();     
 };
 
