@@ -1,23 +1,35 @@
-const showBurgerMenu = () => {
+const operateBurgerMenu = () => {
 
    const hiddenLarge = document.querySelector('.hidden-large'),
       hiddenSmall = document.querySelector('.hidden-small'),
       popupMenu = document.querySelector('.popup-menu'),
+      topMenu = document.querySelector('.top-menu'),
+      fixedGift = document.querySelector('.fixed-gift'),
       closeMenuBtn = document.querySelector('.close-menu-btn');
    
       if(document.documentElement.clientWidth < 768){     
          hiddenSmall.style.display = "none";
          hiddenLarge.style.display = "block";
+         fixedGift.style.right = "52px";
       }
    
    window.addEventListener('resize', () => {
     if (document.documentElement.clientWidth < 768) {
-         hiddenSmall.style.display = "";
+         hiddenSmall.style.display = "none";
          hiddenLarge.style.display = "block";
     } else {
-         hiddenLarge.style.display = "";   
+         hiddenLarge.style.display = "none";   
          hiddenSmall.style.display = "flex";
       }
+   });
+
+   window.addEventListener('scroll', () => {
+      
+      if(document.documentElement.clientWidth < 768 && document.documentElement.scrollTop > topMenu.scrollTop) {
+         topMenu.style.position = "fixed";
+         topMenu.style.top = "0px";
+         fixedGift.style.right = "52px";
+      } else topMenu.style.position = "";   
    });
 
    hiddenLarge.addEventListener('click', (event) => {
@@ -36,4 +48,4 @@ const showBurgerMenu = () => {
    });
 };
 
-export default showBurgerMenu;
+export default operateBurgerMenu;

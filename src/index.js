@@ -1,11 +1,11 @@
 'use strict';
 
-import showBurgerMenu from './modules/showBurgerMenu';
+import operateBurgerMenu from './modules/operateBurgerMenu';
 import showDropDownChooseClub from './modules/showDropDownChooseClub';
 import showModal from './modules/showModal';
 import scrollToTop from './modules/scrollToTop';
 
-showBurgerMenu();
+operateBurgerMenu();
 showDropDownChooseClub();
 showModal();
 scrollToTop();
