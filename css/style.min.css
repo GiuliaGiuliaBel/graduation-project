@@ -551,7 +551,7 @@ html#schelkovo #adv-slider .slider-arrow span {
     background-color: #f4c71b;
     border-radius: 50%;
     text-align: center;
-    padding-top: 11px
+    padding-top: 11px;
 }
 
 html#mozaika #adv-slider .slider-arrow.prev,
@@ -1538,6 +1538,7 @@ nav.popup-menu .close-menu-btn img {
 .services-slider {
     display: flex;
     margin: 0 auto;
+    overflow: hidden;
     padding-left: 15px;
     padding-right: 15px
 }
@@ -1546,6 +1547,7 @@ nav.popup-menu .close-menu-btn img {
     text-align: center;
     margin-right: 6px;
     margin-left: 6px;
+    flex: 0 0 20%;
     width: 210px
 }
 
@@ -1573,20 +1575,34 @@ nav.popup-menu .close-menu-btn img {
 
 .services-slider .slider-arrow {
     position: absolute;
-    top: 75px;
-    margin-top: -18px;
+    /* top: 75px;
+    margin-top: -18px; */
     z-index: 100;
     cursor: pointer
 }
 
-.services-slider .slider-arrow span {
+.services-slider .slider-arrow-left span {
     display: block;
     width: 36px;
     height: 37px;
     background-color: #f4c71b;
     border-radius: 50%;
     text-align: center;
-    padding-top: 11px
+    background: url("../images/arrow-left.png") no-repeat #f4c71b 14px center;
+    padding-top: 11px;
+    cursor: pointer
+}
+
+.services-slider .slider-arrow-right span {
+    display: block;
+    width: 36px;
+    height: 37px;
+    background-color: #f4c71b;
+    border-radius: 50%;
+    text-align: center;
+    background: url("../images/arrow-right.png") no-repeat #f4c71b 14px center;
+    padding-top: 11px;
+    cursor: pointer
 }
 
 .services-slider .slider-arrow.prev {

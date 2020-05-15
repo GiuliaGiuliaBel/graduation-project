@@ -8,6 +8,7 @@ import sliderGallery from './modules/sliderGallery';
 import sendForm from './modules/sendForm';
 import mainSlider from './modules/mainSlider';
 import popupClose from './modules/popupClose';
+import servicesSlider from './modules/servicesSlider';
 
 operateBurgerMenu();
 showDropDownChooseClub();
@@ -17,3 +18,4 @@ sliderGallery();
 mainSlider();
 sendForm('banner-form');
 popupClose();
+servicesSlider();
