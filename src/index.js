@@ -8,6 +8,7 @@ import sliderGallery from './modules/sliderGallery';
 import sendForm from './modules/sendForm';
 import mainSlider from './modules/mainSlider';
 import popupClose from './modules/popupClose';
+import showCallback from './modules/showCallback';
 import servicesSlider from './modules/servicesSlider';
 
 operateBurgerMenu();
@@ -19,3 +20,4 @@ mainSlider();
 sendForm('banner-form');
 popupClose();
 servicesSlider();
+showCallback();
