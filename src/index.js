@@ -2,22 +2,25 @@
 
 import operateBurgerMenu from './modules/operateBurgerMenu';
 import showDropDownChooseClub from './modules/showDropDownChooseClub';
-import showModal from './modules/showModal';
 import scrollToTop from './modules/scrollToTop';
 import sliderGallery from './modules/sliderGallery';
 import sendForm from './modules/sendForm';
 import mainSlider from './modules/mainSlider';
-import popupClose from './modules/popupClose';
-import showCallback from './modules/showCallback';
-import servicesSlider from './modules/servicesSlider';
+import toggleModals from './modules/toggleModals';
+import sliderCarousel from './modules/sliderCarousel';
 
 operateBurgerMenu();
 showDropDownChooseClub();
-showModal();
 scrollToTop();
 sliderGallery();
 mainSlider();
 sendForm('banner-form');
-popupClose();
-servicesSlider();
-showCallback();
+toggleModals();
+
+const carousel = new sliderCarousel({
+    main: '.wrapper',
+    wrap: '.services-slider',
+    infinity: true
+});
+carousel.init();
+
