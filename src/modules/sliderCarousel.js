@@ -44,8 +44,7 @@ export default class sliderCarousel{
             .glo-slider__wrap {
                 display: flex;
                 transition: transform 0.5s;
-                will-change: transform;
-                overflow: hidden;
+                will-change: transform;       
             }
             .glo-slider__item{
                 flex: 0 0 ${this.options.widthSlide}%;

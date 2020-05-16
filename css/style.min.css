@@ -1388,10 +1388,6 @@ nav.popup-menu .close-menu-btn img {
     z-index: 1000
 }
 
-.slider-dots li {
-    float: left
-}
-
 .slider-dots li button {
     width: 22px;
     height: 4px;
@@ -1635,7 +1631,7 @@ nav.popup-menu .close-menu-btn img {
 
 #gallery .gallery-slider .slide-active {
     opacity: 1;
-    margin: 0 auto !important;
+    margin: 0 auto;
     width: 100%
 }
 
@@ -1653,8 +1649,7 @@ nav.popup-menu .close-menu-btn img {
     height: 37px;
     background-color: #f4c71b;
     border-radius: 50%;
-    text-align: center;
-    padding-top: 11px
+    padding-top: 11px;
 }
 
 #gallery .gallery-slider .slider-arrow.prev {
@@ -1668,7 +1663,8 @@ nav.popup-menu .close-menu-btn img {
 #gallery .gallery-slider .slider-dots {
     left: 50%;
     margin-left: -65px;
-    bottom: 5%
+    display: flex;
+    bottom: 5%;
 }
 
 #cards {
