@@ -42,7 +42,7 @@ const sliderGallery = () => {
             nextSlide(liDots, currentSlide, 'slick-active');   
         };
 
-        const createArrow = (classSelector, sel, arrowDirection, direction) => {
+        const createArrow = (classSelector, sel, direction) => {
                 const arrow = document.createElement('div'),
                     span =  document.createElement('span'),
                     main = document.querySelector('.gallery-slider');
@@ -52,15 +52,14 @@ const sliderGallery = () => {
                     span.style.backgroundPosition = "center";
                    
                     arrow.classList.add(classSelector); 
-                    arrow.classList.add(arrowDirection);
                     arrow.classList.add(sel); 
                     main.appendChild(arrow);
                     arrow.appendChild(span); 
                 return arrow;      
         };
 
-        createArrow('slider-arrow', 'prev', 'slider-arrow-left', 'left');
-        createArrow('slider-arrow', 'next', 'slider-arrow-right', 'right' );
+        createArrow('slider-arrow', 'prev', 'left');
+        createArrow('slider-arrow', 'next', 'right' );
       
         const startSlide = (time = 5000) => {
             interval = setInterval(autoplaySlide, time);
