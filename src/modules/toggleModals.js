@@ -1,7 +1,9 @@
 const toggleModals = () => {
     const callbackForm = document.getElementById('callback_form'),
         freeVisitForm = document.getElementById('free_visit_form'),
-        gift = document.getElementById('gift');
+        gift = document.getElementById('gift'),
+        fixedGift = document.querySelector('.fixed-gift'),
+        thanks = document.getElementById('thanks');
 
     document.addEventListener('click', (event) => {
         if (event.target.matches('.callback-btn') || event.target.matches('.close_icon')) {
@@ -15,10 +17,15 @@ const toggleModals = () => {
             freeVisitForm.style.display = "block";
         }  
         if (event.target.matches('.fixed-gift img')){
-            gift.style.display = "block";                    
+            gift.style.display = "block";  
+            fixedGift.style.display = "none";                  
         } 
-        if (event.target.matches('.overlay') || event.target.matches('.close_icon')){        
+        if (event.target.matches('.overlay') || event.target.matches('.close_icon') || event.target.matches('.close-btn')){        
             gift.style.display = "none";
+            fixedGift.style.display = "block";       
+        }  
+         if (event.target.matches('.overlay') || event.target.matches('.btn close-btn') || event.target.matches('.close_icon')){        
+            thanks.style.display = "none";
         }  
     });  
 };

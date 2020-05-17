@@ -41,9 +41,6 @@ export default class sliderCarousel{
         const style = document.createElement('style');
         style.id = 'sliderCarousel-style';
         style.textContent = `
-            .wrapper {
-                overflow: hidden;
-            }
             .glo-slider__wrap {
                 display: flex;
                 transition: transform 0.5s;
@@ -87,23 +84,8 @@ export default class sliderCarousel{
     const createSpan = (classSelector, sel, direction) => {
         const arrow = document.createElement('div'); 
         const span =  document.createElement('span'); 
-            span.style.backgroundImage = `url(../images/arrow-${direction}.png)`;
-            if(direction === "right") {
-                span.style.left = "98%";
-                span.style.top = "-250px";
-            }
-            if(direction === "left") {
-                span.style.top = "-210px";
-            }
-            span.style.backgroundRepeat = "no-repeat";
-            span.style.backgroundColor =  "#f4c71b";
-            span.style.backgroundPosition = "center";
-            span.style.borderRadius = "50%";
-            span.style.height = "36px";
-            span.style.width = "37px";
-            span.style.display = "block";
-            span.style.position = "relative";
-            
+            span.style.backgroundImage = `url(./images/arrow-${direction}.png)`;
+           
             arrow.classList.add(classSelector); 
             arrow.classList.add(sel); 
             this.wrap.parentNode.appendChild(arrow);           
