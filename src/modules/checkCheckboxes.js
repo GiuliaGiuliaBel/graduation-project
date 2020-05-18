@@ -3,20 +3,18 @@ const checkCheckboxes = () => {
 
         forms.forEach(form => {
 
-        const checkbox= form.querySelector('input[type="checkbox"]');
-        if(!checkbox)return;
+        const checkbox= form.querySelector('input[type="checkbox"]'),
+            btn = form.querySelector('button');
+            if(!checkbox) {
+                return;
+            }
 
         checkbox.addEventListener('change', () => {
-            
-            if(checkbox.checked === true) {
-                form.querySelector('button').disabled = false;
-                console.log('checked');             
-            } 
-            if(checkbox.checked === false) {
-                form.querySelector('button').disabled = true;
-                console.log('checked');             
-            } 
-        });
+    
+            if(checkbox.checked && form.querySelectorAll('[required]')) {
+                btn.disabled = false;     
+            } else btn.disabled = true;          
+        })
     });
 };
 

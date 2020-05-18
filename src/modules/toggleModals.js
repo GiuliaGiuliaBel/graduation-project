@@ -24,8 +24,9 @@ const toggleModals = () => {
             gift.style.display = "none";
             fixedGift.style.display = "block";       
         }  
-         if (event.target.matches('.overlay') || event.target.matches('.btn close-btn') || event.target.matches('.close_icon')){        
+         if (event.target.matches('.overlay') || event.target.matches('.close-btn') || event.target.matches('.close_icon')){        
             thanks.style.display = "none";
+            callbackForm.style.display = "none";
         }  
     });  
 };

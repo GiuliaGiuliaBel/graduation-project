@@ -5,6 +5,7 @@ const sendForm = () => {
     forms.forEach(form => {
         
      const btn = form.querySelector('button');
+
      btn.disabled = true;
      
        const postData = body => {

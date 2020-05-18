@@ -47,7 +47,7 @@ const sliderGallery = () => {
                     span =  document.createElement('span'),
                     main = document.querySelector('.gallery-slider');
 
-                    span.style.backgroundImage = `url(../images/arrow-${direction}.png)`;
+                    span.style.backgroundImage = `url(./images/arrow-${direction}.png)`;
                     span.style.backgroundRepeat = "no-repeat";
                     span.style.backgroundPosition = "center";
                    

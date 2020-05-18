@@ -85,7 +85,9 @@ export default class sliderCarousel{
         const arrow = document.createElement('div'); 
         const span =  document.createElement('span'); 
             span.style.backgroundImage = `url(./images/arrow-${direction}.png)`;
-           
+            span.style.backgroundRepeat = "no-repeat";
+            span.style.backgroundPosition = "center";
+            
             arrow.classList.add(classSelector); 
             arrow.classList.add(sel); 
             this.wrap.parentNode.appendChild(arrow);           
