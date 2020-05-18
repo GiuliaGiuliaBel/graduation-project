@@ -21,6 +21,9 @@ const sendForm = () => {
        form.addEventListener('submit', event => {
             event.preventDefault();
             const formData = new FormData(form);
+            if(form.id === 'footer_form') {
+                document.getElementById('callback_form').style.display = "none";
+             }
 
             let body = {};
 
