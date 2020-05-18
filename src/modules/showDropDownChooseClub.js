@@ -5,10 +5,14 @@ const showDropDownChooseClub = () => {
 
     clubsList.addEventListener('click', () => {
     clubsListUl.style.display = 'block';
-    console.log(5);
-    });    
+    });   
     
-    
+    clubsListUl.addEventListener('mouseleave', event => {
+        if(event.target.tagName === "UL") {
+            clubsListUl.style.display = 'none';
+        }
+    });
+
 };
 
 export default showDropDownChooseClub;

@@ -16,18 +16,22 @@ const toggleModals = () => {
         if (event.target.matches('.open-popup')){        
             freeVisitForm.style.display = "block";
         }  
-        if (event.target.matches('.fixed-gift img')){
-            gift.style.display = "block";  
-            fixedGift.style.display = "none";                  
-        } 
-        if (event.target.matches('.overlay') || event.target.matches('.close_icon') || event.target.matches('.close-btn')){        
-            gift.style.display = "none";
-            fixedGift.style.display = "block";       
-        }  
-         if (event.target.matches('.overlay') || event.target.matches('.close-btn') || event.target.matches('.close_icon')){        
-            thanks.style.display = "none";
-            callbackForm.style.display = "none";
-        }  
+        try{
+            if (event.target.matches('.fixed-gift img')){
+                gift.style.display = "block";  
+                fixedGift.style.display = "none";                  
+            }    
+            if (event.target.matches('.overlay') || event.target.matches('.close_icon') || event.target.matches('.close-btn')){        
+                gift.style.display = "none";
+            }  
+             if (event.target.matches('.overlay') || event.target.matches('.close-btn') || event.target.matches('.close_icon')){        
+                thanks.style.display = "none";
+                callbackForm.style.display = "none";
+            }  
+        }
+            catch{
+
+            }    
     });  
 };
 

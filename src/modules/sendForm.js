@@ -29,7 +29,13 @@ const sendForm = () => {
             });
             
             const outputData = () => {
-                document.getElementById('thanks').style.display = "block";
+                document.getElementById('thanks').style.display = "inline";
+                setTimeout(() => {
+                    document.querySelectorAll('.popup').forEach(elem => {
+                        elem.style.display = "none";
+                    })
+                }, 3000)
+            
                 form.reset();
             };
 
@@ -38,6 +44,13 @@ const sendForm = () => {
                 "Данные не удалось отправить на сервер";
                 document.getElementById('thanks').querySelector('h4').textContent =
                 "Произошла ошибка";
+                setTimeout(() => {
+                    document.querySelectorAll('.popup').forEach(elem => {
+                        elem.style.display = "none";
+                    })
+                }, 3000) 
+                  
+                form.reset();        
             };
 
             postData(body)
