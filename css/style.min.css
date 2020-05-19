@@ -877,9 +877,10 @@ body {
 
 .wrapper {
     max-width: 1170px;
+    position: relative;
     margin: 0 auto;
     padding-left: 15px;
-    padding-right: 15px
+    padding-right: 15px;
 }
 
 .btn {
@@ -1245,6 +1246,22 @@ nav.popup-menu .close-menu-btn {
     transition: all 0.3s
 }
 
+.slider-arrow.prev {
+    left: 2px;
+}
+
+.slider-arrow.next {
+    right: 2px;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 150px;
+    margin-top: -19px;
+    z-index: 100;
+    cursor: pointer;
+}
+
 nav.popup-menu .close-menu-btn:hover {
     opacity: .5
 }
@@ -1534,8 +1551,8 @@ nav.popup-menu .close-menu-btn img {
 .services-slider {
     display: flex;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px
+    /* padding-left: 15px;
+    padding-right: 15px */
 }
 
 .services-slider .slide {
@@ -1574,8 +1591,7 @@ nav.popup-menu .close-menu-btn img {
     z-index: 100;
     cursor: pointer
 }
-
-.services-slider .slider-arrow span {
+.slider-arrow span {
     display: block;
     width: 36px;
     height: 37px;
