@@ -6,7 +6,7 @@ const sendForm = () => {
         
      const btn = form.querySelector('button');
 
-     btn.disabled = true;
+    //  btn.disabled = true;
      
        const postData = body => {
            return fetch('./server.php', {

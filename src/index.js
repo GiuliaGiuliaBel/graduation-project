@@ -17,7 +17,7 @@ operateBurgerMenu();
 showDropDownChooseClub();
 scrollToTop();
 maskPhone('+7 (___) ___-__-__');
-// validateName();
+validateName();
 checkCheckboxes();
 sliderGallery();
 mainSlider();

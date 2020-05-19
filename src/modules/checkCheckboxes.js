@@ -2,46 +2,40 @@ const checkCheckboxes = () => {
     const forms = document.querySelectorAll('form');
 
        forms.forEach(form => {
+     
+        const checkbox= form.querySelector('input[type="checkbox"]');
+        const  btn = form.querySelector('button'), 
+           radio = form.querySelectorAll('input[type="radio"]');
+           btn.disabled = true;
+          let done = false;
 
-        // form.addEventListener('click', (event) => {
-        //     if(event.target.name === "card-type"){
-        //         console.log(event.target.id);
-                
-        //     }
-        // });
-
-        // form.addEventListener('change', (event) => {
-        //     if(event.target.name === "club-name"){
-        //         console.log(event.target.value);            
-        //     }
-        // });
-        
-        const checkbox= form.querySelector('input[type="checkbox"]'),
-           btn = form.querySelector('button'), 
-           radio = document.querySelectorAll('input[name="club-name"]');
-      
-           radio.forEach(elem => {             
-            
-                elem.addEventListener('change', () => {
-          
-                      
-                     if (form.querySelector('input[name="phone"]')) {
-                        btn.disabled = false;
-                    }                   
-                });
+           radio.forEach(elem => {
+              elem.addEventListener('change', () => {
+                if(elem.checked && done === true) {              
+                    btn.disabled = false;
+                } else done = true;   
+              })      
            });
-
+           
+         
+           form.querySelector('input[name="phone"]').addEventListener('input', (event) => {
+            if(event.target.value !== '' && done === true) {
+                btn.disabled = false;
+            } else done = true;
+       });
+           
            if(!checkbox) {
                return;
            }
 
        checkbox.addEventListener('change', () => {
-   
-           if(checkbox.checked && form.querySelectorAll('[required]')) {
-               btn.disabled = false;     
-           } else btn.disabled = true;          
-       });
 
+           if(!checkbox.checked) {
+               btn.disabled = true;     
+           } else if(checkbox.checked){
+               btn.disabled = false;      
+           }    
+       });
    });
 };
 
