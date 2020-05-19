@@ -6,6 +6,10 @@ const validateName = () => {
         elem.addEventListener('input', (event) => {
             let target = event.target;
             target.value = target.value.replace(/[^а-я ]/gi, '');
+           
+            // if(elem.closest('.price-message')) {
+            //     target.value = target.value.replace(/[0-9]/, '')            
+            // }
         });
     });
 };

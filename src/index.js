@@ -10,17 +10,18 @@ import toggleModals from './modules/toggleModals';
 import sliderCarousel from './modules/sliderCarousel';
 import checkCheckboxes from './modules/checkCheckboxes';
 import validateName from './modules/validateName';
+import calc from './modules/calc';
 import sendForm from './modules/sendForm';
 
 operateBurgerMenu();
 showDropDownChooseClub();
 scrollToTop();
 maskPhone('+7 (___) ___-__-__');
-validateName();
+// validateName();
 checkCheckboxes();
 sliderGallery();
 mainSlider();
-// sendForm('banner-form');
+calc();
 toggleModals();
 sendForm();
 const carousel = new sliderCarousel({

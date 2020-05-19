@@ -23,6 +23,7 @@ const sendForm = () => {
             const formData = new FormData(form);
             if(form.id === 'footer_form') {
                 document.getElementById('callback_form').style.display = "none";
+                btn.disabled = true;
              }
 
             let body = {};

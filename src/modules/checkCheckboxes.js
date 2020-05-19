@@ -3,16 +3,31 @@ const checkCheckboxes = () => {
 
        forms.forEach(form => {
 
-       const checkbox= form.querySelector('input[type="checkbox"]'),
+        // form.addEventListener('click', (event) => {
+        //     if(event.target.name === "card-type"){
+        //         console.log(event.target.id);
+                
+        //     }
+        // });
+
+        // form.addEventListener('change', (event) => {
+        //     if(event.target.name === "club-name"){
+        //         console.log(event.target.value);            
+        //     }
+        // });
+        
+        const checkbox= form.querySelector('input[type="checkbox"]'),
            btn = form.querySelector('button'), 
            radio = document.querySelectorAll('input[name="club-name"]');
       
-           radio.forEach(elem => {
-               
+           radio.forEach(elem => {             
+            
                 elem.addEventListener('change', () => {
-                    if(elem.checked && form.querySelector('input[name="phone"]').value.trim() !== "") {
-                        btn.disabled = false;                                          
-                    }  else btn.disabled = true;                            
+          
+                      
+                     if (form.querySelector('input[name="phone"]')) {
+                        btn.disabled = false;
+                    }                   
                 });
            });
 
