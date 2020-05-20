@@ -23,7 +23,7 @@ const checkCheckboxes = () => {
                 btn.disabled = false;
             } else done = true;
        });
-           
+ 
            if(!checkbox) {
                return;
            }
