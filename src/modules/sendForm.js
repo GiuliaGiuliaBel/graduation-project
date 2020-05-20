@@ -1,3 +1,5 @@
+import validateNumber from './validateNumber';
+
 const sendForm = () => {
 
     const forms = document.querySelectorAll('form');
@@ -5,8 +7,6 @@ const sendForm = () => {
     forms.forEach(form => {
         
      const btn = form.querySelector('button');
-
-    //  btn.disabled = true;
      
        const postData = body => {
            return fetch('./server.php', {
@@ -20,11 +20,20 @@ const sendForm = () => {
       
        form.addEventListener('submit', event => {
             event.preventDefault();
+            
             const formData = new FormData(form);
+
             if(form.id === 'footer_form') {
                 document.getElementById('callback_form').style.display = "none";
                 btn.disabled = true;
              }
+
+             const inputPhone = [...event.target.elements].filter(elem => elem.name === 'phone');
+
+             if (validateNumber(inputPhone)) {
+               alert('Некорректно введен номер');
+               return;
+             } 
 
             let body = {};
 
