@@ -2254,6 +2254,15 @@ p.personal-data input[type=checkbox]:checked+label:before {
     background-color: #fff
 }
 
+#services .wrapper {
+    max-width: 1170px;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: hidden;
+}
+
 #thanks .form-content p {
     font-size: 20px;
     width: 90%;

@@ -14,7 +14,7 @@ import calc from './modules/calc';
 import sendForm from './modules/sendForm';
 
 operateBurgerMenu();
-showDropDownChooseClub();
+showDropDownChooseClub();// 
 scrollToTop();
 maskPhone('+7 (___) ___-__-__');
 validateName();
@@ -25,7 +25,7 @@ calc();
 toggleModals();
 sendForm();
 const carousel = new sliderCarousel({
-    main: '.wrapper',
+    main: '#services .wrapper',
     wrap: '.services-slider',
     infinity: true
 });
