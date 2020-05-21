@@ -1,7 +1,9 @@
 const calc = () => {
-    
-    try {
-        const priceTotal = document.getElementById('price-total'),
+    if (document.querySelector('html').id === 'mozaika' ||
+    document.querySelector('html').id === 'schelkovo') {
+      
+} else {
+  const priceTotal = document.getElementById('price-total'),
         promoCode = document.querySelector('.price-message > input');
     
         const sale = 0.7;
@@ -65,10 +67,7 @@ const calc = () => {
     });
     
     loopThrough();
-    }
-      
-     catch{
-     }
+}
 };
 
 export default calc;

@@ -9,7 +9,7 @@ const checkCheckboxes = () => {
            btn.disabled = true;
           let done = false;
 
-          form.addEventListener('input', (event) => {
+          form.addEventListener('input', () => {
             let allInpArr = [];
             let count = 0;
 
@@ -25,11 +25,13 @@ const checkCheckboxes = () => {
                 if(elem.value !== '') {
                     count +=1;
                   
-                    if(count === allInpArr.length && !checkbox.checked) {
-                        alert('Дайте согласие на обработку данных');
-                        count = 0;
-                        return true;
-                    } 
+                    if(checkbox){
+                        if(count === allInpArr.length && !checkbox.checked) {
+                            alert('Дайте согласие на обработку данных');
+                            count = 0;
+                            return true;
+                        } 
+                    }                  
                 }
              });
         });

@@ -52,7 +52,9 @@ const sendForm = () => {
             
                 form.reset();
                 btn.disabled = true;
-                checkbox.checked = false;
+                if(checkbox) {
+                    checkbox.checked = false
+                }
             };
 
             const error = () => {
@@ -68,7 +70,9 @@ const sendForm = () => {
                   
                 form.reset();   
                 btn.disabled = true;  
-                checkbox.checked = false   
+                if(checkbox) {
+                    checkbox.checked = false
+                }
             };
 
             postData(body)

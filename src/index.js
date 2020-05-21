@@ -19,7 +19,8 @@ validateName();
 checkCheckboxes();
 sliderGallery();
 mainSlider();
-calc();
+calc('mozaika');
+calc('schelkovo');
 toggleModals();
 sendForm();
 const carousel = new sliderCarousel({
