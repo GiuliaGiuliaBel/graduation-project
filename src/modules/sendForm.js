@@ -43,6 +43,7 @@ const sendForm = () => {
             });
             
             const outputData = () => {
+                
                 document.getElementById('thanks').style.display = "inline";
                 setTimeout(() => {
                     document.querySelectorAll('.popup').forEach(elem => {
@@ -58,6 +59,7 @@ const sendForm = () => {
             };
 
             const error = () => {
+              
                 document.getElementById('thanks').querySelector('p').textContent =
                 "Данные не удалось отправить на сервер";
                 document.getElementById('thanks').querySelector('h4').textContent =
