@@ -9,6 +9,32 @@ const checkCheckboxes = () => {
            btn.disabled = true;
           let done = false;
 
+          form.addEventListener('input', (event) => {
+            let allInpArr = [];
+            let count = 0;
+
+            let inpName = Array.from(form.querySelectorAll('input[name="name"]'));
+            let inpPhone = Array.from(form.querySelectorAll('input[name="phone"]'));
+
+            allInpArr.push(inpName);
+            allInpArr.push(inpPhone);
+
+            allInpArr = inpName.concat(inpPhone);
+        
+            allInpArr.forEach(elem => {
+                if(elem.value !== '') {
+                    count +=1;
+                  
+                    if(count === allInpArr.length && !checkbox.checked) {
+                        alert('Дайте согласие на обработку данных');
+                        count = 0;
+                        return true;
+                    } 
+                }
+             });
+        });
+         
+         
            radio.forEach(elem => {
               elem.addEventListener('change', () => {
                 if(elem.checked && done === true) {              
@@ -23,7 +49,7 @@ const checkCheckboxes = () => {
                 btn.disabled = false;
             } else done = true;
        });
- 
+           
            if(!checkbox) {
                return;
            }

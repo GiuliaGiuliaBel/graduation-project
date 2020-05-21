@@ -29,12 +29,13 @@ const sendForm = () => {
              }
 
              const inputPhone = [...event.target.elements].filter(elem => elem.name === 'phone');
-
+             const checkbox= form.querySelector('input[type="checkbox"]');
              if (validateNumber(inputPhone)) {
                alert('Некорректно введен номер');
                return;
              } 
 
+            
             let body = {};
 
             formData.forEach((val, key) => {
@@ -50,6 +51,8 @@ const sendForm = () => {
                 }, 3000)
             
                 form.reset();
+                btn.disabled = true;
+                checkbox.checked = false;
             };
 
             const error = () => {
@@ -63,7 +66,9 @@ const sendForm = () => {
                     })
                 }, 3000) 
                   
-                form.reset();        
+                form.reset();   
+                btn.disabled = true;  
+                checkbox.checked = false   
             };
 
             postData(body)

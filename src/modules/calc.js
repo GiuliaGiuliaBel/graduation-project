@@ -1,10 +1,12 @@
 const calc = () => {
     
-    try{
-        const sale = 0.7;
+    try {
         const priceTotal = document.getElementById('price-total'),
-              promoCode = document.querySelector('.price-message > input'),
-              forms = document.querySelectorAll('form');
+        promoCode = document.querySelector('.price-message > input');
+    
+        const sale = 0.7;
+     
+             const forms = document.querySelectorAll('form');
             
             const data = {
                 'mozaika': {
@@ -63,10 +65,10 @@ const calc = () => {
     });
     
     loopThrough();
-     
     }
-    catch{}
-   
+      
+     catch{
+     }
 };
 
 export default calc;

@@ -1,7 +1,6 @@
 'use strict';
 
 import operateBurgerMenu from './modules/operateBurgerMenu';
-import showDropDownChooseClub from './modules/showDropDownChooseClub';
 import scrollToTop from './modules/scrollToTop';
 import sliderGallery from './modules/sliderGallery';
 import maskPhone from './modules/maskPhone';
@@ -14,7 +13,6 @@ import calc from './modules/calc';
 import sendForm from './modules/sendForm';
 
 operateBurgerMenu();
-showDropDownChooseClub();// 
 scrollToTop();
 maskPhone('+7 (___) ___-__-__');
 validateName();

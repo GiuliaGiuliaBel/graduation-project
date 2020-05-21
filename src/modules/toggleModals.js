@@ -3,8 +3,9 @@ const toggleModals = () => {
         freeVisitForm = document.getElementById('free_visit_form'),
         gift = document.getElementById('gift'),
         fixedGift = document.querySelector('.fixed-gift'),
+        clubsListUl = document.querySelectorAll('.clubs-list>ul')[0],
         thanks = document.getElementById('thanks');
-
+       
     document.addEventListener('click', (event) => {
         if (event.target.matches('.callback-btn') || event.target.matches('.close_icon')) {
             callbackForm.style.display = "block";
@@ -16,6 +17,15 @@ const toggleModals = () => {
         if (event.target.matches('.open-popup')){        
             freeVisitForm.style.display = "block";
         }  
+       
+        if (event.target.closest('.clubs-list')) {
+       
+            if(clubsListUl.style.display !== "block")
+            clubsListUl.style.display = "block";   
+        } else if( clubsListUl.style.display === "block") {
+            clubsListUl.style.display = "none"
+        }
+       
         try{
             if (event.target.matches('.fixed-gift img')){
                 gift.style.display = "block";  

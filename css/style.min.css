@@ -1034,6 +1034,10 @@ header .head .club-select .clubs-list ul li a {
     text-decoration: none
 }
 
+ul .active{ 
+    display: block;
+}
+
 header .head .club-select .clubs-list ul li a:hover {
     text-decoration: underline
 }
